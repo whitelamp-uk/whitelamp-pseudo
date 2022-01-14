@@ -11,7 +11,7 @@ export class Pseudo extends Generic {
         this.screenLockRefreshInhibit = 1;
         try {
             response = await super.authenticate (
-                this.qs(document,'#gui-email').value
+                this.qs(document.body,'#gui-email').value
                ,null
                ,'pseudo-server'
                ,'\\Pseudo\\Server'
@@ -23,7 +23,7 @@ export class Pseudo extends Generic {
         }
         try {
             response = await super.authenticate (
-                this.qs(document,'#gui-email').value
+                this.qs(document.body,'#gui-email').value
                ,null
                ,'pseudo-auth'
                ,'\\Pseudo\\Auth'
@@ -168,7 +168,7 @@ export class Pseudo extends Generic {
         this.dataRefresh ();
         this.globalLoad ();
         this.access.innerHTML       = this.templates.login ();
-        unlock                      = this.qs (document,'#gui-unlock');
+        unlock                      = this.qs (document.body,'#gui-unlock');
         unlock.addEventListener ('click',this.authProvider.bind(this));
         // Define user scope
         userScope                   = this.userScope ();
