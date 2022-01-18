@@ -16,7 +16,7 @@ export class PseudoCfg {
             storageDuration         : 604800,       // seconds to remember states
             storageLength           : 25            // items per group
         };
-        this.inBodyLoggerId         = 'logger';
+        this.inBodyLogger           = true;
         this.loginByBadge           = true;
         this.mediaUrl               = '/media';
         this.navigatorOptions       = {
